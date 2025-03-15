@@ -1,0 +1,21 @@
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: waxqp8wme-python-gitops
+  description: This is GitOps manifest for waxqp8wme-python   
+  links:
+    - url: https://www.redhat.com/en/solutions/trusted-software-supply-chain
+      title: Trusted Secure Supply Chain 
+      icon: dashboard
+      type: admin-dashboard
+  annotations:    
+    argocd/app-selector: rhtap/gitops=waxqp8wme-python
+    backstage.io/kubernetes-id: waxqp8wme-python 
+    backstage.io/techdocs-ref: dir:. 
+    janus-idp.io/tekton: waxqp8wme-python   
+spec:
+  type: gitops
+  owner: user:guest 
+  lifecycle: experimental
+  dependsOn:
+    - component:waxqp8wme-python
